@@ -1,4 +1,5 @@
-# Healthcare Diagnosis Support System (CrewAI)
+# Healthcare Diagnosis Support System 
+
 
 This document provides a comprehensive overview of the system architecture, agents, tools, workflows, configuration, safety measures, and instructions to run and extend the project.
 
