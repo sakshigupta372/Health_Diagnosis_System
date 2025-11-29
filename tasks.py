@@ -7,7 +7,6 @@ from .agents import (
     interaction_checker,
     scheduler_agent,
     communication_agent,
-    imaging_analyst,
 )
 
 # Task: Symptom analysis
@@ -102,21 +101,4 @@ patient_communication_task = Task(
     ),
     agent=communication_agent,
     expected_output="Clear, empathetic patient-facing instructions and summary",
-)
-
-# Task: Medical imaging analysis
-imaging_analysis_task = Task(
-    description=(
-        "Analyze uploaded medical images and provide detailed diagnostic interpretation:\n"
-        "- Identify imaging modality and anatomical region\n"
-        "- Describe key findings and abnormalities\n"
-        "- Assess severity and clinical significance\n"
-        "- Provide diagnostic assessment with confidence level\n"
-        "- Include patient-friendly explanation\n"
-        "- Integrate findings with patient symptoms and history\n\n"
-        "Medical Image Path: {medical_image_path}\n"
-        "Patient Context: Symptoms: {symptoms}, Demographics: {demographics}, History: {history}\n"
-    ),
-    agent=imaging_analyst,
-    expected_output="Comprehensive imaging analysis report with diagnostic assessment",
 )

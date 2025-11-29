@@ -6,11 +6,6 @@ from .tools import (
     electronic_health_record_access,
     appointment_scheduling,
 )
-from .imaging_tools import (
-    medical_image_analysis,
-    extract_imaging_findings,
-    compare_imaging_timeline,
-)
 from .safety import validate_medical_recommendation, emergency_alert_system
 from .llm import get_llm
 
@@ -98,20 +93,6 @@ communication_agent = Agent(
         "Expert in medical communication, patient education, and health literacy with focus on clear, empathetic communication."
     ),
     tools=[],
-    allow_delegation=False,
-    llm=get_llm(),
-)
-
-# 8. Medical Imaging Analysis Agent
-imaging_analyst = Agent(
-    role="Medical Imaging Radiologist",
-    goal="Analyze medical images and provide detailed diagnostic interpretation",
-    backstory=(
-        "Board-certified radiologist with expertise in interpreting X-rays, MRI, CT scans, "
-        "and other medical imaging modalities. Specializes in detecting abnormalities, "
-        "measuring anatomical structures, and providing evidence-based diagnostic assessments."
-    ),
-    tools=[medical_image_analysis, extract_imaging_findings, compare_imaging_timeline],
     allow_delegation=False,
     llm=get_llm(),
 )

@@ -36,3 +36,10 @@ dist/
 *.zip
 *.tar
 *.tar.gz
+
+# Temporary uploads
+temp_uploads/
+*.png
+*.jpg
+*.jpeg
+*.dicom
