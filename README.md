@@ -1,6 +1,6 @@
-# Healthcare Diagnosis Support System (CrewAI)
+# Healthcare Diagnosis Support System
 
-This project implements a multi-agent Healthcare Diagnosis Support System using CrewAI with advanced medical imaging analysis. It includes:
+This project implements a multi-agent Healthcare Diagnosis Support System with advanced medical imaging analysis. It includes:
 
 - **Symptom analysis** - AI-powered symptom pattern recognition
 - **Medical history review** - Comprehensive patient history analysis
@@ -29,7 +29,7 @@ The system includes a modern Streamlit web interface (`streamlit_app.py`) with:
 - Pluggable tool layer for real API integrations (UMLS, RxNorm, EHR/FHIR, DrugBank, etc.)
 - Config-driven setup via environment variables
 - Simple CLI entry point (`python -m health_crew.app`) for demonstration
-- OpenAI LLM support via CrewAI's native LLM wrapper (primary)
+- OpenAI LLM support with multi-agent orchestration (primary)
 
 ## Project Structure
 
@@ -144,7 +144,7 @@ See `.env.example` for available variables.
   - To enable live clinical guidelines: The endpoint should support `GET /guidelines?q=<condition>` and return `{ "summary": "..." }`
 
 ### Tracing
-- `CREWAI_TRACING_ENABLED=true` - Enable CrewAI execution traces for debugging
+- `CREWAI_TRACING_ENABLED=true` - Enable agent execution traces for debugging
 
 ## Notes on Safety and Compliance
 

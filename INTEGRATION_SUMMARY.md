@@ -45,7 +45,7 @@ Successfully integrated the AI Medical Imaging Agent from `ai_medical_imaging_ag
 #### `.env.example`
 - Reorganized with clear REQUIRED vs OPTIONAL sections
 - Added Google AI API key documentation and links
-- Added CREWAI_TRACING_ENABLED flag
+- Added tracing flag for debugging
 
 #### `README.md`
 - Added "Medical Imaging Analysis" section with capabilities and usage
